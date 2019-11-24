@@ -164,6 +164,18 @@ func Fprintln(w io.Writer, a ...interface{}) {
 	}
 }
 
+// Print colored messages to logger
+// Notice: should be goroutine safe
+func Lprint(l *log.Logger, a ...interface{}) {
+    if isLikeInCmd {
+        renderColorCodeOnCmd(func() {
+            l.Print(Render(a...))
+        })
+    } else {
+        l.Print(Render(a...))
+    }
+}
+
 // Render parse color tags, return rendered string.
 // Usage:
 //	text := Render("<info>hello</> <cyan>world</>!")
