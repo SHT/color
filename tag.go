@@ -5,6 +5,7 @@ import (
 	"io"
 	"regexp"
 	"strings"
+	"log"
 )
 
 // output colored text like use html tag. (not support windows cmd)
