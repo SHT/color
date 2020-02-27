@@ -1,8 +1,9 @@
 package color
 
 import (
-	"testing"
 	"log"
+	"testing"
+
 	"github.com/stretchr/testify/assert"
 )
 

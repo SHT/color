@@ -1,4 +1,4 @@
-module github.com/gookit/color
+module github.com/sht/color
 
 go 1.11
 
